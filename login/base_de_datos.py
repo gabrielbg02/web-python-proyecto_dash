@@ -1,6 +1,6 @@
 import sqlite3
 
-conexion = sqlite3.connect ("bd1.db")
+conexion = sqlite3.connect ("prueba.db")
 try: 
     conexion.execute(""" CREATE TABLE users (
                             id TEXT NOT NULL,
