@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Páginas en un solo archivo</title>
+    <style>
+        .page {
+            display: none;
+        }
+
+        #page1 {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page1" class="page">
+        <h1>Página 1</h1>
+        <p>Este es el mensaje en la Página 1.</p>
+        <button onclick="showPage('page2')">Ir a la Página 2</button>
+    </div>
+
+    <div id="page2" class="page">
+        <h1>Página 2</h1>
+        <p>Este es el mensaje en la Página 2.</p>
+        <button onclick="showPage('page1')">Ir a la Página 1</button>
+        <button onclick="showPage('page3')">Ir a la Página 3</button>
+    </div>
+
+    <div id="page3" class="page">
+        <h1>Página 3</h1>
+        <p>Este es el mensaje en la Página 3.</p>
+        <button onclick="showPage('page2')">Ir a la Página 2</button>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            // Oculta todas las páginas
+            let pages = document.getElementsByClassName('page');
+            for (let page of pages) {
+                page.style.display = 'none';
+            }
+            // Muestra la página seleccionada
+            document.getElementById(pageId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
