@@ -42,6 +42,7 @@ while True:
     print ("Elija la casa que desea ver sus atributos")
     print ("1) Casa de la Lagunita")
     print ("2) Casa de Altamira")
+    print ("3) Ninguna")
     opcion = input ("Opcion a elegir (1 ó 2): ")
     if opcion.isdigit():
         opcion = int(opcion)
